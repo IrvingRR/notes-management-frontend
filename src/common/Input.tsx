@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { BiXCircle } from "react-icons/bi";
-import { Field, FieldContent, InputElement, Legend, Label } from "@/styled/common/form";
+import { Field, FieldContent, InputElement, Legend, Label } from "@/styled/common/form.styles";
 import { InputPropsInterface } from '@/interfaces';
 
 export const Input: FC<InputPropsInterface> = (props: InputPropsInterface) => {

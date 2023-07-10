@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { ButtonPropsInterface } from "@/interfaces/button";
-import { ButtonElement } from "@/styled/common/button";
+import { ButtonElement } from "@/styled/common/button.styles";
 
 export const Button: FC<ButtonPropsInterface> = (props: ButtonPropsInterface) => {
 
