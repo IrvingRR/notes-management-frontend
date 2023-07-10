@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
+import { ProviderComponent } from '@/components/ProviderComponent';
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700'] 
+});
 
 export const metadata: Metadata = {
   title: 'Note Management App',
@@ -15,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <ProviderComponent>
+          {children}
+        </ProviderComponent>
+      </body>
     </html>
   )
 }
