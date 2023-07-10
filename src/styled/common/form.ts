@@ -8,6 +8,11 @@ export const Field = styled.div`
     transition: var(--transition);
 `;
 
+export const Label = styled.label`
+    width: 100%;
+    font-size: var(--fs-s);
+`;
+
 export const FieldContent = styled.div<{ variant?: string }>`
     width: 100%;
     display: flex;
@@ -59,4 +64,17 @@ export const Legend = styled.p<{ isvalid?: boolean }>`
     ${ props => props.isvalid === false && css`
         height: auto;
     ` }
+`;
+
+export const TextAreaElement = styled.textarea`
+    width: 100%;
+    padding: 10px 20px;
+    background-color: ${props => props.theme.backgroundSecondaryColor};
+    color: ${props => props.theme.fontColor};
+    resize: none;
+
+    &:focus {
+        background-color: transparent;
+        border-color: var(--primary-color);
+    }
 `;

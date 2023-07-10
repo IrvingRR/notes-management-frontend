@@ -50,7 +50,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         min-height: 100vh;
-        font-size: var(--fs-m);
+        font-size: var(--fs-s);
         background-color: ${props => props.theme.backgroundPrimaryColor};
         color: ${props => props.theme.fontColor}
     }

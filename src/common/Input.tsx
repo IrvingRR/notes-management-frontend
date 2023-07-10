@@ -1,27 +1,15 @@
-import { ChangeEvent, FC } from 'react';
+import { FC } from 'react';
 import { BiXCircle } from "react-icons/bi";
-import { Field, FieldContent, InputElement, Legend } from "@/styled/common/form";
+import { Field, FieldContent, InputElement, Legend, Label } from "@/styled/common/form";
+import { InputPropsInterface } from '@/interfaces';
 
-interface InputProps {
-    type?: 'text' | 'number' | 'email' | 'password' | 'date'
-    label?: string
-    value?: string | number
-    name: string
-    placeholder?: string
-    disabled?: boolean
-    icon?: JSX.Element
-    legend?: string
-    isValid?: boolean
-    required?: boolean
-    onChange?: (e: ChangeEvent<HTMLInputElement>) => void,
-};
+export const Input: FC<InputPropsInterface> = (props: InputPropsInterface) => {
 
-export const Input: FC<InputProps> = (props: InputProps) => {
-
-    const { icon, legend, isValid } = props;
+    const { icon, legend, isValid, label } = props;
 
     return (
         <Field>
+            { label && <Label>{label}</Label> }
             <FieldContent variant={icon ? 'icon' : ''}>
                 <InputElement variant={icon ? 'icon' : ''} {...props}/>
                 { icon && icon }
