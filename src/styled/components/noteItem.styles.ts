@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const NoteCard = styled.div`
     width: 100%;
@@ -67,17 +67,21 @@ export const NoteCardBody = styled.div`
     font-size: var(--fs-xs);
 `;
 
-export const NoteCardOptions = styled.ul`
+export const NoteCardOptions = styled.ul<{ show: boolean }>`
     background-color: var(--gray-secondary-color);
     border-radius: var(--radius);
-    transition: var(--transition);
     display: flex;
     flex-direction: column;
     position: absolute;
     overflow: hidden;
     top: 30px;
     right: 0;
-    /* height: 0; */
+    height: 0;
+    transition: var(--transition);
+
+    ${props => props.show && css`
+        height: auto;
+    `}
 `;
 
 export const NoteCardOption = styled.li`

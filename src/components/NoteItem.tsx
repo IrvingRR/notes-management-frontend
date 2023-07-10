@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { BiDotsVerticalRounded, BiNote } from "react-icons/bi";
 import { NoteCard, NoteCardBody, NoteCardButton, NoteCardHeader, NoteCardOption, NoteCardOptions, NoteCardTitle } from "@/styled/components/noteItem.styles";
 
 export const NoteItem = () => {
+
+  const [showOptions, setShowOptions] = useState(false);
+
   return (
     <NoteCard>
         <NoteCardHeader>
         <BiNote/>
-        <NoteCardButton>
+        <NoteCardButton onClick={() => setShowOptions(!showOptions)}>
             <BiDotsVerticalRounded/>
-            <NoteCardOptions>
+            <NoteCardOptions show={showOptions}>
             <NoteCardOption>Edit</NoteCardOption>
             <NoteCardOption>Delete</NoteCardOption>
             </NoteCardOptions>
