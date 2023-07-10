@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-export const ButtonElement = styled.button<{ variant?: string }>`
+export const ButtonElement = styled.button<{ variant?: string, isrounded?: boolean }>`
     padding: 8px 10px;
     display: inline-flex;
     align-items: center;
@@ -68,5 +68,10 @@ export const ButtonElement = styled.button<{ variant?: string }>`
         &:active {
             background-color: var(--secondary-color);
         }
+    `}
+
+    /* Rounded */
+    ${props => props.isrounded && css`
+        border-radius: 80px;
     `}
 `;

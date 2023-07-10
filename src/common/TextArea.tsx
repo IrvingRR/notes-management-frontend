@@ -5,14 +5,14 @@ import { TextAreaPropsInterface } from '@/interfaces';
 
 export const TextArea: FC<TextAreaPropsInterface> = (props: TextAreaPropsInterface) => {
 
-    const { legend, isValid, label } = props;
+    const { legend, isValid, label, rounded } = props;
 
     return (
         <Field>
             { label && <Label>{label}</Label> }
             <FieldContent>
                 {/* <TextAreaElement {...props}/> */}
-                <TextAreaElement {...props}/>
+                <TextAreaElement isrounded={rounded} {...props}/>
             </FieldContent>
             { legend && 
             <Legend isvalid={isValid}>

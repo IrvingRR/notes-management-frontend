@@ -28,7 +28,7 @@ export const FieldContent = styled.div<{ variant?: string }>`
     `}
 `;
 
-export const InputElement = styled.input<{ variant?: string }>`
+export const InputElement = styled.input<{ variant?: string, isrounded?: boolean }>`
     width: 100%;
     height: 40px;
     max-width: 500px;
@@ -45,9 +45,19 @@ export const InputElement = styled.input<{ variant?: string }>`
         }
     }
 
+    /* Variants 
+    ---------------------------------*/
+
+    /* Icons */
     ${props => props.variant === 'icon' && css`
         padding-left: 40px;
     `}
+
+    /* Rounded */
+    ${props => props.isrounded && css`
+        border-radius: 80px;
+    `}
+
 `;
 
 export const Legend = styled.p<{ isvalid?: boolean }>`
@@ -66,7 +76,7 @@ export const Legend = styled.p<{ isvalid?: boolean }>`
     ` }
 `;
 
-export const TextAreaElement = styled.textarea`
+export const TextAreaElement = styled.textarea<{ isrounded?: boolean }>`
     width: 100%;
     padding: 10px 20px;
     background-color: ${props => props.theme.backgroundSecondaryColor};
@@ -77,4 +87,12 @@ export const TextAreaElement = styled.textarea`
         background-color: transparent;
         border-color: var(--primary-color);
     }
+
+    /* Variants 
+    ---------------------------------------*/
+
+    /* Rounded */
+    ${props => props.isrounded && css`
+        border-radius: 80px;
+    `}
 `;

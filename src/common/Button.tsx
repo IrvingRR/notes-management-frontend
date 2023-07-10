@@ -4,10 +4,10 @@ import { ButtonElement } from "@/styled/common/button";
 
 export const Button: FC<ButtonPropsInterface> = (props: ButtonPropsInterface) => {
 
-    const { label, variant, icon } = props;
+    const { label, variant, icon, rounded } = props;
 
     return (
-        <ButtonElement variant={variant} { ...props }>
+        <ButtonElement isrounded={rounded} variant={variant} { ...props }>
             { icon && icon }
             { label }
         </ButtonElement>

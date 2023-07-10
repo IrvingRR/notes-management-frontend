@@ -9,5 +9,6 @@ export interface TextAreaPropsInterface {
     legend?: string
     isValid?: boolean
     required?: boolean
+    rounded?: boolean
     onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
 };
