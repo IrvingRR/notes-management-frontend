@@ -6,6 +6,13 @@ import { Input, TextArea, Button } from "@/common";
 import { Form, FormActtions } from "@/styled/common/form.styles";
 import { NoteInterface } from "@/interfaces/note";
 
+/**
+ * This is a component created to handle the creation of a new note
+ * @param {Function} handleCreateNote: When this function is called, execute a http request to create a new note and save it in the database
+ * @param {Function} handleCloseModal: This function allows us to close the modal when the cancel button is clicked
+ */
+
+// Interface create to handle props of component
 interface FormAddProps {
   handleCreateNote: (data?: NoteInterface) => void
   handleCloseModal: () => void
@@ -22,6 +29,7 @@ export const FormAddNote: FC<FormAddProps> = (props: FormAddProps) => {
   
   const [form, setForm] = useState(initialValues);
 
+  // This function allows to handle the state using the value of the every input in the form
   const handleChange = (e: React.ChangeEvent<HTMLFormElement | HTMLInputElement  | HTMLTextAreaElement>) => {
     setForm({
       ...form,
@@ -29,6 +37,7 @@ export const FormAddNote: FC<FormAddProps> = (props: FormAddProps) => {
     });
   };
 
+  // This function isi responsible for handle the submit event of the form. If the title and description are filled so the form will executed the handleCreateNote function
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -42,7 +51,7 @@ export const FormAddNote: FC<FormAddProps> = (props: FormAddProps) => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2>Create Note</h2>
+      <h3>Create Note</h3>
       <Input type='text' name='title' placeholder="Title" variant='secondary' legend='Title invalid' onChange={handleChange}/>
       <TextArea name="description" placeholder="Description" variant="secondary" onChange={handleChange}/>
       <FormActtions>

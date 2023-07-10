@@ -1,4 +1,6 @@
-import { LogoElement } from '@/styled/common/logo.styles'
+import { LogoElement } from '@/styled/common/logo.styles';
+
+// This component allows us to display a simple logo element styled
 
 export const Logo = () => {
   return (

@@ -8,6 +8,14 @@ import { Modal } from "@/common";
 import { ConfirmComponent } from "./ConfirmComponent";
 import { useModal } from "@/hooks";
 
+/**
+ * This is a reausable NoteItem to display the information of every note inte the application
+ * @param {NoteInterface} note: Is the note information which will be display in the component
+ * @param {Function} handleDeleteNote: Is the function which allows us to execute the http request to delete a note from the database
+ * @param {Function} handleSelecNoteToUpdage: This function allows us to select the specific note which we want to delete
+ */
+
+// Interface create to handle the props of the component
 interface NotePropsInterface {
   note: NoteInterface
   handleDeleteNote: (id?: number) => void

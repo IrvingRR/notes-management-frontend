@@ -1,5 +1,7 @@
 import { ChangeEvent } from 'react';
 
+// Interface create to handle the props of the TextArea component
+
 export interface TextAreaPropsInterface {
     label?: string
     value?: string

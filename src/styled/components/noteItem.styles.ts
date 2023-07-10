@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 
 export const NoteCard = styled.div`
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,8 @@ export const NoteCardBody = styled.div`
     height: 100%;
     font-size: var(--fs-xs);
     text-align: center;
+    max-height: 200px;
+    overflow: auto;
 `;
 
 export const NoteCardOptions = styled.ul<{ show: boolean }>`

@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 
 export const Form = styled.form`
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     border-radius: var(--radius);
     background-color: ${props => props.theme.backgroundSecondaryColor};
     padding: 20px;
@@ -13,7 +13,7 @@ export const Form = styled.form`
     gap: 10px;
 
     h2 {
-        font-size: var(--fs-m);
+        font-size: var(--fs-s);
     }
 `;
 

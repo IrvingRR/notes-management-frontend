@@ -1,5 +1,6 @@
 import { ChangeEvent } from 'react';
 
+// Interface create to handle the props of the Input component
 export interface InputPropsInterface {
     type?: 'text' | 'number' | 'email' | 'password' | 'date'
     label?: string

@@ -13,7 +13,7 @@ export const ModalWrapper = styled.div<{ show: boolean }>`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999;
     transition: var(--transition);
     transform: translateX(-100%);
     opacity: 0;

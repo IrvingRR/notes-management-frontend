@@ -1,7 +1,10 @@
 import { NoteInterface } from "@/interfaces/note";
 
+// This file content all functions to do http requests to the database and handle the information about the notes
+
 const URL = 'http://127.0.0.1:8000/api/notes';
 
+// This function allows us to get all notes from database
 export const getNotesService = async () => {
     try {
         const request = await fetch(URL, {
@@ -14,6 +17,7 @@ export const getNotesService = async () => {
     }
 };
 
+// This function allows us to get only one note by id
 export const getNoteService = async (id?: number) => {
     try {
         const request = await fetch(`${URL}/${id}`,);
@@ -24,6 +28,7 @@ export const getNoteService = async (id?: number) => {
     }
 };
 
+// This function allows us to delete a note by id
 export const deleteNoteService = async (id?: number) => {
     try {
         const request = await fetch(`${URL}/${id}`, {
@@ -36,6 +41,7 @@ export const deleteNoteService = async (id?: number) => {
     }
 };
 
+// This function allows us to create a new note
 export const createNoteService = async (data?: NoteInterface) => {
     try {
         
@@ -53,6 +59,7 @@ export const createNoteService = async (data?: NoteInterface) => {
     }
 };
 
+// This function allows us to update a specific note
 export const updateNoteService = async (id?: number, data?: NoteInterface) => {
     try {
         

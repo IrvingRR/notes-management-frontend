@@ -76,6 +76,23 @@ export const GlobalStyles = createGlobalStyle`
         transition: var(--transition);
     }
 
+    /* Scrollbar */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: ${props => props.theme.backgroundSecondaryColor};
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: ${props => props.theme.backgroundPrimaryColor};
+    }
+
+
     /* Animations */
 
     @keyframes rotateSpinner {

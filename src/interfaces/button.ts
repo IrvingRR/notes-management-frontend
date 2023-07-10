@@ -1,3 +1,4 @@
+// Interface create to handle the props of the Button component
 export interface ButtonPropsInterface {
     type?: 'submit' | 'button' | 'reset'
     label: string

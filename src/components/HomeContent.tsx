@@ -12,6 +12,12 @@ import { Container, Header } from '@/styled/pages/home.styles';
 import { NoteInterface } from "@/interfaces/note";
 import { createNoteService, deleteNoteService, getNoteService, updateNoteService } from '@/services/notes';
 
+/**
+ * This component allows us to render all the content of the Homepage to avoid have problems with the use of the state
+ * @param {NoteInterface[]} data: Is the array with all the notes obtained in the home page
+ */
+
+// Interface create to handle the props of the component
 interface HomeComponentProps {
   data: NoteInterface[]
 }
@@ -25,6 +31,8 @@ export const HomeContent: FC<HomeComponentProps> = ({ data }: HomeComponentProps
   const [search, setSearch] = useState('');
   const [noteSelected, setNoteSelected] = useState<NoteInterface>({title: '', description: ''});
 
+
+  // This function allows us to execute the http request to delete a specific note by id
   const handleDeleteNote = async (id?: number) => {
     const response = await deleteNoteService(id);
     console.log('Response delete', response);
@@ -39,9 +47,11 @@ export const HomeContent: FC<HomeComponentProps> = ({ data }: HomeComponentProps
     }
   };
 
+  // This function allows us to execute the http request to create a new note
   const handleCreateNote = async (data?: NoteInterface) => {
     const response = await createNoteService(data);
     console.log('Response delete', response);
+
 
     if(response.ok) {
 
@@ -57,6 +67,7 @@ export const HomeContent: FC<HomeComponentProps> = ({ data }: HomeComponentProps
     }
   };
 
+  // This function allows us to execute the http request to update a specific note by id
   const handleUpdateNote = async (id?: number, data?: NoteInterface) => {
 
     const response = await updateNoteService(id, data);
@@ -79,6 +90,7 @@ export const HomeContent: FC<HomeComponentProps> = ({ data }: HomeComponentProps
     }
   }
 
+  // This function allows us to execute the http request to get a specific note by id
   const handleSelectNoteToUpdate = async (id?: number) => {
     const response = await getNoteService(id);
     if(response.ok) {
@@ -98,7 +110,7 @@ export const HomeContent: FC<HomeComponentProps> = ({ data }: HomeComponentProps
             <FormEditNote noteSelected={noteSelected} handleUpdateNote={handleUpdateNote} handleCloseModalEdit={handleCloseModalEdit}/>
         </Modal>
       <h2>Notes list</h2>
-      <p>Toal: {notes.length} notes</p>
+      <p>Total: {notes.length} notes</p>
       <Header>
         <Button label='Create new' onClick={handleOpenModal}/>
       </Header>

@@ -42,4 +42,5 @@ export const CardConfirmOptions = styled.div`
     align-items: center;
     justify-content: center;
     gap: 8px;
+    font-size: var(--fs-s);
 `;
