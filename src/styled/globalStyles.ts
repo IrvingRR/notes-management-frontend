@@ -66,4 +66,9 @@ export const GlobalStyles = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    a {
+        text-decoration: none;
+        transition: var(--transition);
+    }
 `;
