@@ -11,5 +11,5 @@ export interface InputPropsInterface {
     legend?: string
     isValid?: boolean
     required?: boolean
-    onChange?: (e: ChangeEvent<HTMLInputElement>) => void,
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 };

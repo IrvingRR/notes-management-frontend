@@ -63,6 +63,7 @@ export const GlobalStyles = createGlobalStyle`
         outline: none;
         transition: var(--transition);
         border-radius: var(--radius);
+        font-size: var(--fs-s);
     }
 
     button {
