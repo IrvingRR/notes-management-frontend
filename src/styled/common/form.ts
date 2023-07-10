@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components';
 
 export const Field = styled.div`
     width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -30,11 +31,12 @@ export const FieldContent = styled.div<{ variant?: string }>`
 
 export const InputElement = styled.input<{ variant?: string, isrounded?: boolean }>`
     width: 100%;
-    height: 40px;
+    height: 35px;
     max-width: 500px;
     padding: 10px 20px;
     background-color: ${props => props.theme.backgroundSecondaryColor};
     color: ${props => props.theme.fontColor};
+    font-size: var(--fs-s);
 
     &:focus {
         background-color: transparent;
@@ -82,6 +84,7 @@ export const TextAreaElement = styled.textarea<{ isrounded?: boolean }>`
     background-color: ${props => props.theme.backgroundSecondaryColor};
     color: ${props => props.theme.fontColor};
     resize: none;
+    font-size: var(--fs-s);
 
     &:focus {
         background-color: transparent;

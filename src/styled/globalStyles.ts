@@ -52,7 +52,8 @@ export const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         font-size: var(--fs-s);
         background-color: ${props => props.theme.backgroundPrimaryColor};
-        color: ${props => props.theme.fontColor}
+        color: ${props => props.theme.fontColor};
+        transition: 0.3s background-color ease;
     }
 
     button,
@@ -63,7 +64,7 @@ export const GlobalStyles = createGlobalStyle`
         outline: none;
         transition: var(--transition);
         border-radius: var(--radius);
-        font-size: var(--fs-s);
+        font-size: var(--fs-m);
     }
 
     button {
