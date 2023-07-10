@@ -1,3 +1,5 @@
+"use client";
+
 import styled, {css} from 'styled-components';
 
 export const Form = styled.form`
@@ -34,6 +36,7 @@ export const FieldContent = styled.div<{ variant?: string }>`
     display: flex;
     align-items: center;
     position: relative;
+    transition: var(--transition);
 
     ${props => props.variant === 'icon' && css`
 
@@ -52,6 +55,7 @@ export const InputElement = styled.input<{ variant?: string, isrounded?: boolean
     background-color: ${props => props.theme.backgroundSecondaryColor};
     color: ${props => props.theme.fontColor};
     font-size: var(--fs-s);
+    transition: var(--transition);
 
     &:focus {
         background-color: transparent;
@@ -82,9 +86,8 @@ export const InputElement = styled.input<{ variant?: string, isrounded?: boolean
 
 `;
 
-export const Legend = styled.p<{ isvalid?: boolean }>`
+export const Legend = styled.div<{ isvalid?: string | null }>`
     width: 100%;
-    color: var(--primary-color);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -92,8 +95,9 @@ export const Legend = styled.p<{ isvalid?: boolean }>`
     transition: var(--transition);
     height: 0;
     overflow: hidden;
+    color: var(--primary-color);
     
-    ${ props => props.isvalid === false && css`
+    ${ props => props.isvalid === 'false' && css`
         height: auto;
     ` }
 `;

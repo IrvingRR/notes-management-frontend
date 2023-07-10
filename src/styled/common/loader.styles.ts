@@ -1,3 +1,5 @@
+"use client";
+
 import styled, { css } from 'styled-components';
 
 export const LoaderWrapper = styled.div`

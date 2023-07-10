@@ -1,3 +1,5 @@
+"use client";
+
 import styled, {css} from 'styled-components';
 
 export const ButtonElement = styled.button<{ variant?: string, isrounded?: boolean }>`

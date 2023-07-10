@@ -9,7 +9,7 @@ export interface InputPropsInterface {
     disabled?: boolean
     icon?: JSX.Element
     legend?: string
-    isValid?: boolean
+    isValid?: boolean | null
     required?: boolean
     rounded?: boolean
     variant?: string

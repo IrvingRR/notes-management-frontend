@@ -1,3 +1,5 @@
+"use client";
+
 import styled, { css } from 'styled-components';
 
 export const NoteCard = styled.div`
@@ -14,10 +16,7 @@ export const NoteCard = styled.div`
     transition: var(--transition);
 
     &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0px 0px 5px -1px var(--gray-secondary-color);
-        -webkit-box-shadow: 0px 0px 5px -1px var(--gray-secondary-color);
-        -moz-box-shadow: 0px 0px 5px -1px var(--gray-secondary-color);
+        /* transform: translateY(-3px); */
     }
 `;
 
@@ -65,6 +64,7 @@ export const NoteCardTitle = styled.div`
 export const NoteCardBody = styled.div`
     height: 100%;
     font-size: var(--fs-xs);
+    text-align: center;
 `;
 
 export const NoteCardOptions = styled.ul<{ show: boolean }>`

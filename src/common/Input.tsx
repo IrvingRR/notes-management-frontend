@@ -14,8 +14,8 @@ export const Input: FC<InputPropsInterface> = (props: InputPropsInterface) => {
                 <InputElement isrounded={rounded} variant={icon ? 'icon' : ''} {...props}/>
                 { icon && icon }
             </FieldContent>
-            { legend && 
-            <Legend isvalid={isValid}>
+            { legend &&
+            <Legend isvalid={isValid?.toString()}>
                 <BiXCircle/>
                 { legend }
             </Legend> }

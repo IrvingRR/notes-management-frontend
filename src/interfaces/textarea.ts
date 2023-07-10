@@ -7,7 +7,7 @@ export interface TextAreaPropsInterface {
     placeholder?: string
     disabled?: boolean
     legend?: string
-    isValid?: boolean
+    isValid?: boolean | null
     required?: boolean
     rounded?: boolean
     variant?: string
