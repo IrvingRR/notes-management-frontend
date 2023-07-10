@@ -1,5 +1,15 @@
+"use client";
+
+import { BiSearch } from "react-icons/bi";
+import { Container} from "@/styled/pages/home.styles";
+import { Input } from "@/common";
+
 export default function Home() {
+
   return (
-   <h1>Hi!, note management application</h1>
+   <Container>
+      <h2>Notes list</h2>
+      <Input type='text' name='seach' placeholder='Search notes' icon={<BiSearch/>} legend='Invalid search'/>
+   </Container>
   );
 };

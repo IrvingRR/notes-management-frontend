@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
         --gray-color: rgb(204, 204, 204);
         --white-color: rgb(255, 255, 255);
         --gray-secondary-color: rgb(72, 79, 89);
+        --gray-secondary-color: rgb(96,117,117);
 
         /* Light */
         --background-primary-color-light: rgb(255, 255, 255);
@@ -25,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
         --font-color-dark: rgb(255, 255, 255);
 
         /* Font */
+        --fs-xs: 11px;
         --fs-s: 12px;
         --fs-m: 14px;
         --fs-l: 20px;
