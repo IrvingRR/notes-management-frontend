@@ -4,12 +4,15 @@ import { BiSearch } from "react-icons/bi";
 import { Container, NotesContainer } from "@/styled/pages/home.styles";
 import { Input, Modal } from "@/common";
 import { NoteItem } from "@/components";
+import { useModal } from "@/hooks";
 
 export default function Home() {
 
+  const { isOpenedModal, handleOpenModal, handleCloseModal } = useModal();
+
   return (
    <Container>
-      <Modal showModal={false}>
+      <Modal showModal={isOpenedModal} handleCloseModal={handleCloseModal}>
         <h2>Modal content</h2>
       </Modal>
       <h2>Notes list</h2>
