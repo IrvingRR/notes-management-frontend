@@ -19,10 +19,18 @@ export const Container = styled.div`
     }
 `;
 
+export const Header = styled.header`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: center;
+`;
+
 export const NotesContainer = styled.div`
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;

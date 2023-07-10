@@ -5,12 +5,12 @@ import { InputPropsInterface } from '@/interfaces';
 
 export const Input: FC<InputPropsInterface> = (props: InputPropsInterface) => {
 
-    const { icon, legend, isValid, label, rounded } = props;
+    const { icon, legend, isValid, label, rounded, variant } = props;
 
     return (
         <Field>
             { label && <Label>{label}</Label> }
-            <FieldContent variant={icon ? 'icon' : ''}>
+            <FieldContent variant={icon ? 'icon' : variant}>
                 <InputElement isrounded={rounded} variant={icon ? 'icon' : ''} {...props}/>
                 { icon && icon }
             </FieldContent>

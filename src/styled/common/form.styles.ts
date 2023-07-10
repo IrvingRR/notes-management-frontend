@@ -1,8 +1,23 @@
 import styled, {css} from 'styled-components';
 
+export const Form = styled.form`
+    width: 100%;
+    max-width: 450px;
+    border-radius: var(--radius);
+    background-color: ${props => props.theme.backgroundSecondaryColor};
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h2 {
+        font-size: var(--fs-m);
+    }
+`;
+
 export const Field = styled.div`
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -60,6 +75,11 @@ export const InputElement = styled.input<{ variant?: string, isrounded?: boolean
         border-radius: 80px;
     `}
 
+    /* Secondary */
+    ${props => props.variant === 'secondary' && css`
+        background-color: ${props.theme.backgroundPrimaryColor};
+    `}
+
 `;
 
 export const Legend = styled.p<{ isvalid?: boolean }>`
@@ -78,7 +98,7 @@ export const Legend = styled.p<{ isvalid?: boolean }>`
     ` }
 `;
 
-export const TextAreaElement = styled.textarea<{ isrounded?: boolean }>`
+export const TextAreaElement = styled.textarea<{ isrounded?: boolean, variant?: string }>`
     width: 100%;
     padding: 10px 20px;
     background-color: ${props => props.theme.backgroundSecondaryColor};
@@ -98,4 +118,16 @@ export const TextAreaElement = styled.textarea<{ isrounded?: boolean }>`
     ${props => props.isrounded && css`
         border-radius: 80px;
     `}
+
+    /* Secondary */
+    /* Secondary */
+    ${props => props.variant === 'secondary' && css`
+        background-color: ${props.theme.backgroundPrimaryColor};
+    `}
+`;
+
+export const FormActtions = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
 `;

@@ -12,5 +12,6 @@ export interface InputPropsInterface {
     isValid?: boolean
     required?: boolean
     rounded?: boolean
+    variant?: string
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 };
