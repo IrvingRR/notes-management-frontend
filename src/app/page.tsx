@@ -2,7 +2,7 @@
 
 import { BiSearch } from "react-icons/bi";
 import { Container, Header } from "@/styled/pages/home.styles";
-import { Button, Input, Modal } from "@/common";
+import { Button, Input, Loader, Modal } from "@/common";
 import { FormAddNote, FormEditNote, Notes } from "@/components";
 import { useModal } from "@/hooks";
 
@@ -13,6 +13,7 @@ export default function Home() {
 
   return (
    <Container>
+      <Loader/>
       <Modal showModal={isOpenedModal} handleCloseModal={handleCloseModal}>
         <FormAddNote/>
       </Modal>

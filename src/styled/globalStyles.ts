@@ -75,4 +75,16 @@ export const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         transition: var(--transition);
     }
+
+    /* Animations */
+
+    @keyframes rotateSpinner {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 `;
